@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body style="background-color: #24353F;">
+    
+    <div class="container p-sm-5 p-4 position-absolute start-50 top-50 translate-middle" style="background-color: #24353F;">
+        <h1 class="text-center mb-4">Smart Login System</h1>
+        <input type="text" class="form-control mb-3 " id="nameInputSign" placeholder="Enter Your Name">
+        <input type="email" class="form-control mb-3 " id="emailInputSign" placeholder="Enter Your Email">
+        <div class="alert alert-danger d-none" role="alert" id="emailAlert">
+            Please Enter A Valid Email
+        </div>
+        <input type="password" class="form-control mb-3 " id="passwordInputSign" placeholder="Enter Password">
+        <div class="alert alert-danger d-none" role="alert" id="passwordAlert">
+            Your password must have at least 6 characters, numbers and symbols
+        </div>
+        <div class="alert alert-danger d-none" role="alert" id="emailExist">
+            Email is already exist
+        </div>
+        <button class="btn btn-outline-info mt-3 px-5 position-relative start-50 translate-middle-x" id="signBtn">Sign Up</button>
+        <p class="text-white  text-center mt-3">You have an account? <a class="text-white" href="index.html">Signin</a></p>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+:root {
+  --main-color: #17a2b8;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+  box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+  width: 80%;
+}
+h1 {
+  color: var(--main-color);
+  font-size: 40px;
+}
+.btn-outline-info {
+  --bs-btn-color: var(--main-color);
+  --bs-btn-border-color: var(--main-color);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--main-color);
+  --bs-btn-hover-border-color: var(--main-color);
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: var(--main-color);
+  --bs-btn-active-border-color: var(--main-color);
+  --bs-btn-disabled-color: var(--main-color);
+  --bs-btn-disabled-border-color: var(--main-color);
+}
+.navbar-brand {
+  background-image: linear-gradient(#fff, #17a2b8, #17a2b8);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  word-spacing: 2px;
+  letter-spacing: 0.5px;
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    width: 70%;
+  }
+}
+/* X-Large devices (desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    width: 50%;
+  }
+}
