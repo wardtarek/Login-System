@@ -4,6 +4,7 @@ var passwordInputSign = document.getElementById("passwordInputSign");
 var signBtn = document.getElementById("signBtn");
 var emailAlert = document.getElementById("emailAlert");
 var passwordAlert = document.getElementById("passwordAlert");
+var nameAlert = document.getElementById("nameAlert");
 var emailExist = document.getElementById("emailExist");
 
 var userList = [];
@@ -14,7 +15,7 @@ if (localStorage.getItem("users") != null) {
 signBtn.addEventListener("click", addUser);
 function addUser() {
   emailExist.classList.add("d-none");
-  if (validEmail() && validPassword()) {
+  if (validEmail() && validPassword() && validName()) {
     user = {
       name: nameInputSign.value,
       email: emailInputSign.value,
@@ -36,7 +37,21 @@ function addUser() {
     }
   }
 }
-
+nameInputSign.addEventListener("change", validName);
+function validName() {
+  var regex = /^[a-zA-Z]{2,}$/
+  if (regex.test(nameInputSign.value)) {
+    nameInputSign.classList.add("is-valid");
+    nameInputSign.classList.remove("is-invalid");
+    nameAlert.classList.add("d-none");
+    return true;
+  } else {
+    nameInputSign.classList.add("is-invalid");
+    nameInputSign.classList.remove("is-valid");
+    nameAlert.classList.remove("d-none");
+    return false;
+  }
+}
 emailInputSign.addEventListener("change", validEmail);
 function validEmail() {
   var regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
